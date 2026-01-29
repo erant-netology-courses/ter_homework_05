@@ -18,33 +18,41 @@ Check: CKV_TF_2: "Ensure Terraform module sources use a tag with a version numbe
 
 <img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/2_6.jpg?raw=true" />
 
-## Задание 3
-
-Удаление
-
-<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/3_rm.jpg?raw=true" />
-
-Восстановление 1
-
-<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/3_restoration_1.jpg?raw=true" />
-
-Восстановление 2
-
-<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/3_restoration_2.jpg?raw=true" />
-
-Грустно что терраформ не умеет в нормальную синхронизацию и важно в какой последовательности я восстанавливаю. Восстанавливал из яндекса + автогенерированные файлы бекапов.
-
-Проверка тоже ок, кроме 1 параметра от яндекса:
-
-<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/3_import_back.jpg?raw=true" />
-
-[Ссылка на команды восстановления](https://github.com/erant-netology-courses/ter_homework_04/state_restored.txt)
-
-## Задание 4*
-Сделал как часть 2го, т.к. не понял что имелось в виду в ТЗ по 2 заданию.
+## Задание 4
+<img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/4.JPG?raw=true" />
 
 ## Задание 5*
-Тут обнаружил, что не следовал конвенции по неймингу через underscore (привычка из разработки). Рефачить не стал.
+```
+variable "any_string" {
+  type = string
+  description="любая строка"
+
+  validation {
+    condition = var.any_string == lower(var.any_string)
+    error_message = "Есть символы верхнего регистра"
+  }
+}
+# "Asvb" == lower("Asvb")
+# "test" == lower("test")
+
+variable "obj_structure" {
+  type = object({
+    Dunkan = optional(bool)
+    Connor = optional(bool)
+  })
+  description="Who is better Connor or Duncan?"
+
+  default = {
+    Dunkan = true
+    Connor = false
+  }
+
+  validation {
+    error_message = "There can be only one MacLeod"
+    condition = var.obj_structure.Dunkan != var.obj_structure.Connor
+  }
+}
+```
 
 1 хост:
 
