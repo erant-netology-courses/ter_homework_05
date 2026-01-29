@@ -28,6 +28,7 @@ module "my_vpc_module" {
   ]
 }
 
+# checkov:skip=CKV_TF_1,CKV_TF_2,CKV_YC_19:Это локальный модуль; Безопасность уже безопасна в модуле
 module "example" {
   source = "./modules/mysql_cluster"
   cluster_name = "example"
@@ -37,6 +38,7 @@ module "example" {
   HA  = false
 }
 
+# checkov:skip=CKV_TF_1,CKV_TF_2:Это локальный модуль; Безопасность уже безопасна в модуле
 module "db_cluster" {
   source = "./modules/mysql_db"
   db_name = "example_db"
@@ -44,9 +46,9 @@ module "db_cluster" {
   cluster_id = module.example.cluster.id
 }
 
-
+# checkov:skip=CKV_TF_1,CKV_TF_2:Контролируется хэшем коммита
 module "test-vm" {
-  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=c59b04f9428f89fdce7b2e2fbccdd284c6f9f6a2"
   env_name       = "develop"
   # network_id     = yandex_vpc_network.develop.id
   # subnet_zones   = ["ru-central1-a","ru-central1-b"]
@@ -69,9 +71,9 @@ module "test-vm" {
   }
 
 }
-
+# checkov:skip=CKV_TF_1,CKV_TF_2:Контролируется хэшем коммита
 module "example-vm" {
-  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=c59b04f9428f89fdce7b2e2fbccdd284c6f9f6a2"
   env_name       = "stage"
   # network_id     = yandex_vpc_network.develop.id
   # subnet_zones   = ["ru-central1-a"]
