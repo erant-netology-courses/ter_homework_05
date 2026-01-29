@@ -1,0 +1,63 @@
+E:\Development\Нетология-DevOps\2_Облачная инфраструктура. Terraform\ДЗ\04\demonstration1\vms>terraform state list
+data.template_file.cloudinit
+yandex_vpc_network.develop
+yandex_vpc_subnet.develop_a
+yandex_vpc_subnet.develop_b
+module.example-vm.data.yandex_compute_image.my_image
+module.example-vm.yandex_compute_instance.vm[0]
+module.my_vpc_module.yandex_vpc_network.my-module-network
+module.my_vpc_module.yandex_vpc_subnet.my-module-subnet[0]
+module.my_vpc_module.yandex_vpc_subnet.my-module-subnet[1]
+module.test-vm.data.yandex_compute_image.my_image
+module.test-vm.yandex_compute_instance.vm[0]
+module.test-vm.yandex_compute_instance.vm[1]
+
+data.template_file.cloudinit
+yandex_vpc_network.develop
+yandex_vpc_subnet.develop_a
+yandex_vpc_subnet.develop_b
+module.example-vm.data.yandex_compute_image.my_image
+module.example-vm.yandex_compute_instance.vm[0]
+module.my_vpc_module.yandex_vpc_network.my-module-network
+module.my_vpc_module.yandex_vpc_subnet.my-module-subnet[0]
+module.my_vpc_module.yandex_vpc_subnet.my-module-subnet[1]
+module.test-vm.data.yandex_compute_image.my_image
+module.test-vm.yandex_compute_instance.vm[0]
+module.test-vm.yandex_compute_instance.vm[1]
+
+E:\Development\Нетология-DevOps\2_Облачная инфраструктура. Terraform\ДЗ\04\demonstration1\vms>terraform state rm module.my_vpc_module
+Removed module.my_vpc_module.yandex_vpc_network.my-module-network
+Removed module.my_vpc_module.yandex_vpc_subnet.my-module-subnet[0]
+Removed module.my_vpc_module.yandex_vpc_subnet.my-module-subnet[1]
+Successfully removed 3 resource instance(s).
+
+terraform import "module.my_vpc_module.yandex_vpc_network.my-module-network" enpkgpb3qr9sfkr325vi
+
+terraform import "module.my_vpc_module.yandex_vpc_subnet.my-module-subnet[0]" e9b3qj4954oo7mnjuta6
+terraform import "module.my_vpc_module.yandex_vpc_subnet.my-module-subnet[1]" e2lg4smdqjqc3p04teeh
+
+E:\Development\Нетология-DevOps\2_Облачная инфраструктура. Terraform\ДЗ\04\demonstration1\vms>terraform state rm module.example-vm
+Removed module.example-vm.data.yandex_compute_image.my_image
+Removed module.example-vm.yandex_compute_instance.vm[0]
+Successfully removed 2 resource instance(s).
+
+terraform import 'module.example-vm.data.yandex_compute_image.my_image'
+terraform import "module.example-vm.yandex_compute_instance.vm[0]" fhm90ileovsbu0qepns0
+
+E:\Development\Нетология-DevOps\2_Облачная инфраструктура. Terraform\ДЗ\04\demonstration1\vms>terraform state rm module.test-vm
+Removed module.test-vm.data.yandex_compute_image.my_image
+Removed module.test-vm.yandex_compute_instance.vm[0]
+Removed module.test-vm.yandex_compute_instance.vm[1]
+Successfully removed 3 resource instance(s).
+
+terraform import "module.test-vm.data.yandex_compute_image.my_image" <ID-образа>
+
+terraform import "module.test-vm.yandex_compute_instance.vm[0]" fhm4jfvr713o0snd0s62
+terraform import "module.test-vm.yandex_compute_instance.vm[1]" epdiloiic79e0uqh9l66
+
+
+E:\Development\Нетология-DevOps\2_Облачная инфраструктура. Terraform\ДЗ\04\demonstration1\vms>terraform state list
+data.template_file.cloudinit
+yandex_vpc_network.develop
+yandex_vpc_subnet.develop_a
+yandex_vpc_subnet.develop_b
