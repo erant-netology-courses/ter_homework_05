@@ -25,12 +25,13 @@ Checkov - мегабагованная штука, особенно в срав�
 docker run --rm -v "%cd%:/src" -w /src bridgecrew/checkov --directory /src --quiet
 ```
 
-<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/3_4_checkov.jpg?raw=true" />
+<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_05/blob/terraform-hotfix/3_4_checkov.JPG?raw=true" />
 
 Tflint - получше
 
-<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/3_4_tflint.jpg?raw=true" />
+<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_05/blob/terraform-hotfix/3_4_tflint.JPG?raw=true" />
 
 Apply - Очень большой, поэтому вот концовка
 
-<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/3_5_apply.jpg?raw=true" />
+<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_05/blob/terraform-hotfix/3_5_apply.JPG?raw=true" />
+
