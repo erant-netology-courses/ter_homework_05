@@ -12,11 +12,11 @@ Check: CKV_TF_2: "Ensure Terraform module sources use a tag with a version numbe
 ## Задание 2
 Настроил бекенд для терраформ стейта:
 
-<img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/2_2.jpg?raw=true" />
+<img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_05/blob/main/2_2.jpg?raw=true" />
 
 Отбило блокировку, разблокировал
 
-<img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/2_6.jpg?raw=true" />
+<img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_05/blob/main/2_6.jpg?raw=true" />
 
 ## Задание 3
 
@@ -34,4 +34,5 @@ Tflint - получше
 Apply - Очень большой, поэтому вот концовка
 
 <img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_05/blob/terraform-hotfix/3_5_apply.JPG?raw=true" />
+
 
