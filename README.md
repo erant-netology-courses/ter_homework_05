@@ -59,4 +59,4 @@ variable "obj_structure" {
 ## Задание 7*
 Я знаю, что рут модуль должен быть в своем проекте, но добавил его в эту репу в подмодуль.
 
-[Код для задания](https://github.com/erant-netology-courses/ter_homework_05/modules/backend)
+[Код для задания](https://github.com/erant-netology-courses/ter_homework_05/tree/main/modules/backend)
