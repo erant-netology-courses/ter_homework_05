@@ -12,14 +12,14 @@ Check: CKV_TF_2: "Ensure Terraform module sources use a tag with a version numbe
 ## Задание 2
 Настроил бекенд для терраформ стейта:
 
-<img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/2_2.jpg?raw=true" />
+<img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_05/blob/main/2_2.jpg?raw=true" />
 
 Отбило блокировку, разблокировал
 
-<img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/2_6.jpg?raw=true" />
+<img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_05/blob/main/2_6.jpg?raw=true" />
 
 ## Задание 4
-<img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/4.JPG?raw=true" />
+<img width="880" height="660" alt="image" src="https://github.com/erant-netology-courses/ter_homework_05/blob/main/4.JPG?raw=true" />
 
 ## Задание 5*
 ```
@@ -53,31 +53,10 @@ variable "obj_structure" {
   }
 }
 ```
-
-1 хост:
-
-<img width="1280" height="860" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/5_process1.jpg?raw=true" />
-
-<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/5_ya_resources1.jpg?raw=true" />
-
-4 хоста:
-<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/5_process2.jpg?raw=true" />
-
-<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/5_ya_resources2.jpg?raw=true" />
-
-Очень долго создавал дополнительные 3 хоста. Я ушел на тренировку, придя с нее увидел что оно сожрало 150 рублей. Поэтому вопрос:
-
-#### А что сейчас выгоднее - самому кластером управлять или от облака?
-
 ## Задание 6*
-Попытался, проще создать вручную, чем долбаться с aws (который после событий в РФ все перестали использовать) и конфигурировать еще и их с токеном.
+Не стал делать, полноценное CI/CD делаю на работе в данный момент (не для терраформа).
 
 ## Задание 7*
-[Код для задания](https://github.com/erant-netology-courses/ter_homework_04/task_7.tf)
+Я знаю, что рут модуль должен быть в своем проекте, но добавил его в эту репу в подмодуль.
 
-Результат работы:
-
-<img width="1280" height="360" alt="image" src="https://github.com/erant-netology-courses/ter_homework_04/blob/main/7_vault.jpg?raw=true" />
-
-## Задание 8*
-Разобрался. При помощи backend сохранить состояние одного модуля (сети), а после в создании ВМ указать что есть terraform_remote_state и обратиться к нему.
+[Код для задания](https://github.com/erant-netology-courses/ter_homework_05/modules/backend)
